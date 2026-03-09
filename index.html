@@ -86,118 +86,112 @@
       padding: 72px 0;
     }
 
-    .section-title {
-      font-size: 36px;
-      line-height: 1.2;
-      margin: 0 0 14px;
-      text-align: center;
-    }
+ .section-subtitle {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+  color: #6f5c49;
+  font-size: 18px;
+}
 
-    .section-subtitle {
-      max-width: 760px;
-      margin: 0 auto 34px;
-      text-align: center;
-      color: #6f5c49;
-      font-size: 18px;
-    }
+.grid {
+  display: grid;
+  gap: 22px;
+}
 
-    .grid {
-      display: grid;
-      gap: 22px;
-    }
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
 
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
 
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
+.card {
+  background: #fffdf9;
+  border: 1px solid #eadfcf;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(59,47,35,0.05);
+}
 
-    .card {
-      background: #fffdf9;
-      border: 1px solid #eadfcf;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(59,47,35,0.05);
-    }
+.card h3,
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
-    .card h3,
-    .card h4 {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+.use-case {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3b2f23;
+}
 
-    .use-case {
-      font-size: 18px;
-      font-weight: 700;
-      color: #3b2f23;
-    }
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
 
-    .split {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 32px;
-      align-items: center;
-    }
+.soft-panel {
+  background: #fff;
+  border: 1px solid #eadfcf;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(59,47,35,0.05);
+}
 
-    .soft-panel {
-      background: #fff;
-      border: 1px solid #eadfcf;
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 8px 24px rgba(59,47,35,0.05);
-    }
+.check-list {
+  padding-left: 18px;
+  margin: 14px 0 0;
+}
 
-    .check-list {
-      padding-left: 18px;
-      margin: 14px 0 0;
-    }
+.check-list li {
+  margin-bottom: 10px;
+}
 
-    .check-list li {
-      margin-bottom: 10px;
-    }
+.process-step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #b89b5e;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
 
-    .process-step-number {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #b89b5e;
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
+.video-box {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #4b3b2b, #8b6f48);
+  color: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.08);
+}
 
-    .video-box {
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, #4b3b2b, #8b6f48);
-      color: #fff;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      font-size: 20px;
-      font-weight: 700;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+.about-wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  align-items: center;
+}
 
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .portrait-placeholder {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #d6c4a0, #7a5f3c);
+.portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #d6c4a0, #7a5f3c);
+}
       display: flex;
       align-items: center;
       justify-content: center;
