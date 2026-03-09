@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legacy Family Film | Your Memories Turned Into Film</title>
+  <meta
+    name="description"
+    content="Legacy Family Film turns your photos and videos into cinematic family films. Perfect for anniversaries, memorials, birthdays, graduations, and life milestones."
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #faf7f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    h1, h2, h3, h4 {
+      margin-top: 0;
+    }
+
+    .site-title {
+      font-size: 28px;
+      margin: 0;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .cta-nav {
+      background: #b89b5e;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #e9e4dc;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      max-width: 850px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #b89b5e;
+      padding: 14px 24px;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      opacity: 0.92;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-light {
+      background: #faf7f2;
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-dark {
+      background: #222;
+      color: white;
+    }
+
+    .section-center {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-white .card,
+    .section-light .card {
+      border: 1px solid #eee7dd;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .video-placeholder {
+      background: #111;
+      color: white;
+      border-radius: 10px;
+      padding: 70px 20px;
+      text-align: center;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .steps {
+      max-width: 800px;
+      margin: 30px auto 0;
+      padding-left: 20px;
+    }
+
+    .steps li {
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      color: #b89b5e;
+      margin: 14px 0;
+    }
+
+    .addon-list,
+    .faq-list {
+      max-width: 900px;
+      margin: 30px auto 0;
+    }
+
+    .addon-list li,
+    .faq-list li {
+      margin-bottom: 12px;
+      font-size: 17px;
+    }
+
+    form {
+      max-width: 760px;
+      margin: 30px auto 0;
+      background: white;
+      padding: 28px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 18px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d7d1c8;
+      border-radius: 8px;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .about-box {
+      max-width: 850px;
+      margin: 30px auto 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .cta-section {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #222;
+      color: white;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .site-title {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title">Legacy Family Film</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#examples">Examples</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#start" class="cta-nav">Start Your Film</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h2>Your family’s memories deserve more than sitting on a phone.</h2>
+      <p>
+        We turn your photos and videos into beautiful cinematic family films you can
+        watch, share, and treasure for years.
+      </p>
+      <a class="button" href="#start">Start Your Film</a>
+    </div>
+  </section>
+
+  <section class="section-light section-center">
+    <div class="container">
+      <h3>Perfect For</h3>
+      <div class="grid">
+        <div class="card">Family Highlight Videos</div>
+        <div class="card">Anniversary Films</div>
+        <div class="card">Memorial Tributes</div>
+        <div class="card">Graduation Videos</div>
+        <div class="card">Kids Growing Up Films</div>
+        <div class="card">Vacation Recaps</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white section-center" id="examples">
+    <div class="container">
+      <h2>See What Your Memories Can Become</h2>
+      <p class="muted">
+        Replace these placeholders with your real video examples later.
+      </p>
+      <div class="video-grid">
+        <div class="video-placeholder">Family Montage Example</div>
+        <div class="video-placeholder">Anniversary Tribute Example</div>
+        <div class="video-placeholder">Memorial Film Example</div>
+      </div>
+      <p style="max-width: 760px; margin: 30px auto 0;">
+        Anyone can save clips on a phone. Very few turn them into a story your family
+        will actually sit down and watch forever.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-light section-center" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="muted">Simple for you. Professionally handled from start to finish.</p>
+      <ol class="steps">
+        <li><strong>Choose your film type</strong> — Highlight, Story, or Legacy Film.</li>
+        <li><strong>Upload your photos and videos</strong> — phone clips, old footage, voice notes, and more.</li>
+        <li><strong>Tell us the story</strong> — the occasion, the feeling, and what matters most.</li>
+        <li><strong>We edit everything into a cinematic film</strong> — shaped with care and professional storytelling.</li>
+        <li><strong>Receive your finished movie</strong> — ready to watch, share, gift, or preserve.</li>
+      </ol>
+      <p style="max-width: 760px; margin: 25px auto 0;">
+        Family members can also contribute clips if you want to create a collaborative
+        tribute or group memory film.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-white section-center" id="pricing">
+    <div class="container">
+      <h2>Choose Your Film</h2>
+      <div class="pricing">
+        <div class="card">
+          <h3>Highlight Film</h3>
+          <p>2–4 minutes</p>
+          <p>Perfect for birthdays, vacations, and simple family recaps.</p>
+          <div class="price">$149+</div>
+        </div>
+        <div class="card">
+          <h3>Story Film</h3>
+          <p>5–8 minutes</p>
+          <p>Best for anniversaries, graduations, and meaningful life events.</p>
+          <div class="price">$349+</div>
+        </div>
+        <div class="card">
+          <h3>Legacy Film</h3>
+          <p>8–15 minutes</p>
+          <p>Perfect for memorials, milestone moments, and once-in-a-lifetime keepsakes.</p>
+          <div class="price">$749+</div>
+        </div>
+      </div>
+
+      <ul class="addon-list" style="text-align:left;">
+        <li>Rush delivery</li>
+        <li>Extra runtime</li>
+        <li>Extra revisions</li>
+        <li>Family member upload link</li>
+        <li>Social media cutdown version</li>
+        <li>Custom title card</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-light section-center">
+    <div class="container">
+      <h2>About Legacy Family Film</h2>
+      <div class="about-box">
+        For the last 10 years, I’ve filmed and saved my own family’s memories.
+        Looking back on those moments has become one of the most meaningful things we have.
+        Legacy Family Film exists to help other families turn everyday clips, photos, and stories
+        into something lasting, beautiful, and worth watching again and again.
+      </div>
+    </div>
+  </section>
+
+  <section class="section-white section-center">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list" style="text-align:left;">
+        <li>How do I send my photos and videos?</li>
+        <li>How long does a project usually take?</li>
+        <li>Can you use old footage and scanned photos?</li>
+        <li>Can multiple family members contribute clips?</li>
+        <li>What if I don’t know what music to choose?</li>
+        <li>Do you create memorial and tribute videos?</li>
+        <li>How many revisions are included?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-dark cta-section">
+    <div class="container">
+      <h3 style="font-size: 32px;">Turn Your Memories Into a Family Film Today</h3>
+      <p style="max-width: 700px; margin: 0 auto 24px;">
+        Your best moments deserve more than being forgotten in your camera roll.
+      </p>
+      <a class="button" href="#start">Start Your Project</a>
+    </div>
+  </section>
+
+  <section class="section-light section-center" id="start">
+    <div class="container">
+      <h2>Start Your Family Film</h2>
+      <p>
+        Fill this out and we’ll review your project and contact you with next steps.
+      </p>
+
+      <form action="https://formspree.io/f/xwpqlypv" method="POST">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required />
+
+        <label for="occasion">Occasion</label>
+        <input id="occasion" type="text" name="occasion" />
+
+        <label for="film">Film Type</label>
+        <select id="film" name="film">
+          <option>Highlight Film</option>
+          <option>Story Film</option>
+          <option>Legacy Film</option>
+        </select>
+
+        <label for="details">Describe the story you'd like to tell</label>
+        <textarea id="details" name="details"></textarea>
+
+        <label for="deadline">Ideal Deadline</label>
+        <input id="deadline" type="text" name="deadline" placeholder="Example: Need it by June 20" />
+
+        <p class="form-note">
+          After submitting, you can be sent instructions for how to share photos,
+          videos, voice notes, and any family contributions.
+        </p>
+
+        <button class="button" type="submit">Submit My Project</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Legacy Family Film</p>
+    <p>Your memories turned into a film your family will watch forever.</p>
+  </footer>
+
+</body>
+</html>
