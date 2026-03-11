@@ -4,15 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Legacy Family Film | Turn Family Photos and Videos Into One Beautiful Film</title>
+  <title>Legacy Family Film | Preserve Your Family Story</title>
   <meta name="description" content="Turn years of family photos and home videos into one meaningful film you can watch and treasure forever. Request your Legacy Family Film quote today." />
   <link rel="canonical" href="https://legacyfamilyfilm.com/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://legacyfamilyfilm.com/" />
-  <meta property="og:title" content="Legacy Family Film | Turn Family Photos and Videos Into One Beautiful Film" />
+  <meta property="og:title" content="Legacy Family Film | Preserve Your Family Story" />
   <meta property="og:description" content="We turn years of family photos and home videos into one meaningful film you can watch and treasure forever." />
-  <meta property="og:image" content="https://legacyfamilyfilm.com/images/og-share-image.jpg" />
+  <meta property="og:image" content="https://legacyfamilyfilm.com/kurt-family.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Legacy Family Film | Preserve Your Family Story" />
+  <meta name="twitter:description" content="Turn family photos and home videos into one beautiful legacy film." />
+  <meta name="twitter:image" content="https://legacyfamilyfilm.com/kurt-family.jpg" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <script type="application/ld+json">
   {
@@ -20,7 +27,7 @@
     "@type": "ProfessionalService",
     "name": "Legacy Family Film",
     "url": "https://legacyfamilyfilm.com/",
-    "image": "https://legacyfamilyfilm.com/images/og-share-image.jpg",
+    "image": "https://legacyfamilyfilm.com/kurt-family.jpg",
     "description": "Legacy Family Film helps families turn years of photos and home videos into one meaningful film they can watch and treasure forever.",
     "priceRange": "$$",
     "areaServed": "US",
@@ -35,6 +42,17 @@
   </script>
 
   <style>
+    :root {
+      --primary: #b89b5e;
+      --primary-dark: #9a814d;
+      --bg-cream: #f6f1e8;
+      --bg-white: #fffdf9;
+      --text-main: #3b2f23;
+      --text-muted: #6f5c49;
+      --border: #eadfcf;
+      --dark: #2c221a;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -46,8 +64,8 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f6f1e8;
-      color: #3b2f23;
+      background: var(--bg-cream);
+      color: var(--text-main);
       line-height: 1.6;
     }
 
@@ -58,6 +76,7 @@
 
     a {
       text-decoration: none;
+      transition: 0.2s ease;
     }
 
     .container {
@@ -106,7 +125,7 @@
     }
 
     .nav-cta {
-      background: #b89b5e;
+      background: var(--primary);
       color: #fff;
       padding: 11px 16px;
       border-radius: 8px;
@@ -114,7 +133,8 @@
     }
 
     .hero {
-      background: linear-gradient(rgba(59,47,35,0.40), rgba(59,47,35,0.45)),
+      background:
+        linear-gradient(rgba(59,47,35,0.48), rgba(59,47,35,0.56)),
         url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: #fff;
       padding: 110px 0 100px;
@@ -162,17 +182,26 @@
       border: none;
       cursor: pointer;
       font-size: 16px;
+      text-align: center;
     }
 
     .button-primary {
-      background: #b89b5e;
+      background: var(--primary);
       color: #fff;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
     }
 
     .button-secondary {
       background: rgba(255,255,255,0.12);
       color: #fff;
       border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255,255,255,0.18);
     }
 
     section {
@@ -190,7 +219,7 @@
       max-width: 760px;
       margin: 0 auto 34px;
       text-align: center;
-      color: #6f5c49;
+      color: var(--text-muted);
       font-size: 18px;
     }
 
@@ -208,8 +237,8 @@
     }
 
     .card {
-      background: #fffdf9;
-      border: 1px solid #eadfcf;
+      background: var(--bg-white);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px;
       box-shadow: 0 8px 24px rgba(59,47,35,0.05);
@@ -223,7 +252,7 @@
 
     .soft-panel {
       background: #fff;
-      border: 1px solid #eadfcf;
+      border: 1px solid var(--border);
       border-radius: 18px;
       padding: 28px;
       box-shadow: 0 8px 24px rgba(59,47,35,0.05);
@@ -236,32 +265,99 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: #b89b5e;
+      background: var(--primary);
       color: #fff;
       font-weight: 700;
       margin-bottom: 14px;
     }
 
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 30px;
-      align-items: center;
+    .video-shell {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .portrait-placeholder {
-      width: 100%;
-      aspect-ratio: 4 / 5;
+    .video-frame {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
       border-radius: 18px;
-      background: linear-gradient(135deg, #d6c4a0, #7a5f3c);
+      box-shadow: 0 8px 24px rgba(59,47,35,0.08);
+      background: #000;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    .about-photo-wrap {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 22px;
-      font-weight: 700;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .kurt-photo {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(59,47,35,0.08);
+    }
+
+    .photo-caption {
       text-align: center;
-      padding: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .pricing-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      position: relative;
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(59,47,35,0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
+      transform: scale(1.03);
+      box-shadow: 0 16px 30px rgba(59,47,35,0.10);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
     .price {
@@ -273,8 +369,34 @@
     }
 
     .price-note {
-      color: #6f5c49;
+      color: var(--text-muted);
       font-size: 14px;
+    }
+
+    .plan-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      flex-grow: 1;
+    }
+
+    .plan-list li {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .plan-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .plan-button {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
     }
 
     .faq {
@@ -292,9 +414,27 @@
       margin-bottom: 6px;
     }
 
+    .testimonial-grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial-quote {
+      font-size: 17px;
+      color: var(--text-main);
+      margin: 0 0 14px;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      color: #7a5f3c;
+      margin: 0;
+    }
+
     form {
-      background: #fffdf9;
-      border: 1px solid #eadfcf;
+      background: var(--bg-white);
+      border: 1px solid var(--border);
       border-radius: 18px;
       box-shadow: 0 8px 24px rgba(59,47,35,0.05);
       padding: 30px;
@@ -302,11 +442,21 @@
       margin: 0 auto;
     }
 
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
     label {
       display: block;
       font-weight: 700;
       margin-bottom: 8px;
-      margin-top: 18px;
+      margin-top: 2px;
     }
 
     input,
@@ -318,7 +468,7 @@
       border-radius: 10px;
       font-size: 16px;
       background: #fff;
-      color: #3b2f23;
+      color: var(--text-main);
     }
 
     textarea {
@@ -328,7 +478,7 @@
 
     .form-note {
       margin-top: 16px;
-      color: #6f5c49;
+      color: var(--text-muted);
       font-size: 14px;
     }
 
@@ -345,8 +495,21 @@
       font-size: 18px;
     }
 
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .footer-links a {
+      color: #f6f1e8;
+      font-size: 14px;
+    }
+
     footer {
-      background: #2c221a;
+      background: var(--dark);
       color: #f6f1e8;
       padding: 34px 0;
       text-align: center;
@@ -364,8 +527,14 @@
     @media (max-width: 900px) {
       .grid-3,
       .grid-2,
-      .about-wrap {
+      .testimonial-grid,
+      .form-grid,
+      .pricing-grid {
         grid-template-columns: 1fr;
+      }
+
+      .pricing-card.featured {
+        transform: none;
       }
 
       .hero h1 {
@@ -415,6 +584,7 @@
       <a href="#home" class="brand">Legacy Family Film</a>
       <nav>
         <a href="#home">Home</a>
+        <a href="#examples">Sample Film</a>
         <a href="#how">How It Works</a>
         <a href="#pricing">Pricing</a>
         <a href="#about">Meet Kurt</a>
@@ -434,30 +604,31 @@
         </p>
         <div class="hero-buttons">
           <a href="#start" class="button button-primary">Start Your Family Film</a>
-          <a href="#how" class="button button-secondary">See How It Works</a>
+          <a href="#examples" class="button button-secondary">Watch a Sample</a>
         </div>
       </div>
     </div>
   </section>
-<section id="examples" style="background:#fffaf2;">
-  <div class="container">
-    <h2 class="section-title">Watch a Sample Legacy Film</h2>
-    <p class="section-subtitle">
-      See how photos, home videos, and family memories can be turned into one meaningful film.
-    </p>
 
-    <div style="max-width:900px; margin:0 auto;">
-      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:18px; box-shadow:0 8px 24px rgba(59,47,35,0.08);">
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-          title="Sample Legacy Film"
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-          allowfullscreen>
-        </iframe>
+  <section id="examples" style="background:#fffaf2;">
+    <div class="container">
+      <h2 class="section-title">Watch a Sample Legacy Film</h2>
+      <p class="section-subtitle">
+        See how photos, home videos, and family memories can be turned into one meaningful film.
+      </p>
+
+      <div class="video-shell">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+            title="Sample Legacy Film"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <section id="how">
     <div class="container">
       <h2 class="section-title">How It Works</h2>
@@ -545,10 +716,11 @@
     <div class="container">
       <h2 class="section-title">Meet Kurt and His Family</h2>
       <div class="about-wrap">
-      <img src="kurt-family.jpg" alt="Kurt with his wife and children" class="kurt-photo">
-        <p style="text-align:center; font-size:14px; color:#777; margin-top:8px;">
-Kurt with his wife and kids — the inspiration behind Legacy Family Film.
-</p>
+        <div class="about-photo-wrap">
+          <img src="kurt-family.jpg" alt="Kurt with his wife and children" class="kurt-photo">
+          <p class="photo-caption">Kurt with his wife and kids — the inspiration behind Legacy Family Film.</p>
+        </div>
+
         <div class="soft-panel">
           <p>Hi, I’m Kurt.</p>
           <p>
@@ -572,44 +744,83 @@ Kurt with his wife and kids — the inspiration behind Legacy Family Film.
 
   <section id="pricing">
     <div class="container">
-      <h2 class="section-title">Choose Your Film</h2>
+      <h2 class="section-title">Film Packages</h2>
       <p class="section-subtitle">
-        Starting prices shown below. Final pricing can vary depending on runtime, amount of media,
-        and complexity of the project.
+        Choose the length and depth that best fits your story. Each package is professionally edited and built to preserve what matters most.
       </p>
 
-      <div class="grid grid-3">
-        <div class="card">
+      <div class="pricing-grid">
+        <div class="pricing-card">
           <h3>Highlight Film</h3>
-          <p>2–4 minutes</p>
           <div class="price">$149+</div>
-          <p>Perfect for birthdays, vacations, and shorter family recaps.</p>
-          <p class="price-note"><strong>Estimated turnaround:</strong> 3–5 days after upload deadline</p>
+          <p>Perfect for birthdays, vacations, short recaps, and simple family highlights.</p>
+          <ul class="plan-list">
+            <li>2–4 minute runtime</li>
+            <li>Up to 50 photos/videos</li>
+            <li>3–5 day turnaround after upload deadline</li>
+            <li>Best for shorter, lighter projects</li>
+          </ul>
+          <a href="#start" class="button button-secondary plan-button" style="color:#fff;">Choose Highlight</a>
         </div>
 
-        <div class="card">
+        <div class="pricing-card featured">
+          <div class="badge">Most Popular</div>
           <h3>Story Film</h3>
-          <p>5–8 minutes</p>
           <div class="price">$349+</div>
-          <p>Best for anniversaries, graduation stories, and more emotional projects.</p>
-          <p class="price-note"><strong>Estimated turnaround:</strong> 7–10 days after upload deadline</p>
+          <p>Ideal for anniversaries, graduation stories, emotional family gifts, and more complete storytelling.</p>
+          <ul class="plan-list">
+            <li>5–8 minute runtime</li>
+            <li>Up to 150 photos/videos</li>
+            <li>7–10 day turnaround after upload deadline</li>
+            <li>1 round of minor revisions included</li>
+          </ul>
+          <a href="#start" class="button button-primary plan-button">Choose Story Film</a>
         </div>
 
-        <div class="card">
+        <div class="pricing-card">
           <h3>Legacy Film</h3>
-          <p>8–15 minutes</p>
           <div class="price">$749+</div>
-          <p>Ideal for memorials, major milestones, and deeper family legacy projects.</p>
-          <p class="price-note"><strong>Estimated turnaround:</strong> 10–14 days after upload deadline</p>
+          <p>Best for memorials, milestone life stories, deep family projects, and higher-volume memory collections.</p>
+          <ul class="plan-list">
+            <li>8–15 minute runtime</li>
+            <li>High-volume / extended media project</li>
+            <li>10–14 day turnaround after upload deadline</li>
+            <li>Built for deeper narrative storytelling</li>
+          </ul>
+          <a href="#start" class="button button-secondary plan-button" style="color:#fff;">Choose Legacy Film</a>
         </div>
       </div>
 
       <p class="section-subtitle" style="margin-top:28px;">
-        Optional add-ons can include rush delivery, extra runtime, extra revisions,
-        social-media versions, and family contribution options.
+        Optional add-ons can include rush delivery, extra runtime, extra revisions, social-media versions, and family contribution options.
       </p>
     </div>
-    <button type="submit" class="button button-primary">Start My Film</button>
+  </section>
+
+  <section style="background:#fffaf2;">
+    <div class="container">
+      <h2 class="section-title">Why Families Trust This Process</h2>
+      <p class="section-subtitle">
+        This is personal work. Families need to know their memories are being handled with care.
+      </p>
+
+      <div class="testimonial-grid">
+        <div class="card">
+          <p class="testimonial-quote">“Kurt has a way of making ordinary moments feel incredibly meaningful.”</p>
+          <p class="testimonial-name">Family Friend</p>
+        </div>
+
+        <div class="card">
+          <p class="testimonial-quote">“He understands story, pacing, and emotion — and he treats family memories with real respect.”</p>
+          <p class="testimonial-name">Creative Collaborator</p>
+        </div>
+
+        <div class="card">
+          <p class="testimonial-quote">“This isn’t just editing. It feels like preserving something your family can keep forever.”</p>
+          <p class="testimonial-name">Early Supporter</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section style="background:#fffaf2;">
@@ -675,7 +886,7 @@ Kurt with his wife and kids — the inspiration behind Legacy Family Film.
     <div class="container">
       <h2 class="section-title" style="color:#fff;">Your Family’s Memories Deserve More Than Sitting on a Phone</h2>
       <p>
-        Turn scattered photos and home videos into one beautiful film your family can watch,
+        Turn scattered photos and home videos into one beautiful film your family will watch,
         share, and treasure for years.
       </p>
       <a href="#start" class="button button-primary">Start Your Project</a>
@@ -684,23 +895,89 @@ Kurt with his wife and kids — the inspiration behind Legacy Family Film.
 
   <section id="start">
     <div class="container">
-      <h2 class="section-title">Start Your Family Film</h2>
+      <h2 class="section-title">Start Your Film</h2>
       <p class="section-subtitle">
-        Fill this out to start your project. Kurt personally reviews every request before sending
-        your upload link, agreed upload deadline, and estimated timeline.
+        Tell Kurt a little about your project and he’ll follow up with the next steps. No payment is required yet — this just gets the conversation started.
       </p>
 
       <form action="https://formspree.io/f/xwpqlypv" method="POST">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required />
+        <input type="hidden" name="_subject" value="Legacy Family Film Form Submission">
 
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="name" required>
+          </div>
 
-        <label for="occasion">Occasion</label>
-        <input id="occasion" type="text" name="occasion" placeholder="Birthday, memorial, anniversary, graduation, etc." />
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required>
+          </div>
 
-        <label for="film">Film Type</label>
-        <select id="film" name="film">
-          <option>Highlight Film</option>
-         
+          <div>
+            <label for="occasion">Occasion / Goal</label>
+            <input id="occasion" type="text" name="occasion" placeholder="Birthday, memorial, anniversary, graduation, etc.">
+          </div>
+
+          <div>
+            <label for="film">Desired Package</label>
+            <select id="film" name="film">
+              <option>Story Film (Most Popular)</option>
+              <option>Highlight Film</option>
+              <option>Legacy Film</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="deadline">When do you need the final film?</label>
+            <input id="deadline" type="text" name="deadline" placeholder="Example: Need it by July 15">
+          </div>
+
+          <div>
+            <label for="media-volume">Approx. Number of Photos/Videos</label>
+            <select id="media-volume" name="media_volume">
+              <option>Less than 50</option>
+              <option>50–150</option>
+              <option>150–300</option>
+              <option>300+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="full-width">
+            <label for="details">Anything else Kurt should know?</label>
+            <textarea id="details" name="details" placeholder="Tell Kurt about the story, the mood, who it’s for, music preferences, or any special memories that matter most."></textarea>
+          </div>
+        </div>
+
+        <p class="form-note">
+          After submitting, you can receive instructions for sharing photos, videos, voice recordings, and family contributions.
+        </p>
+
+        <button type="submit" class="button button-primary">Send Project Request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Legacy Family Film</strong></p>
+      <p>Helping families turn years of photos and home videos into one meaningful film they can watch and treasure forever.</p>
+      <p class="small">Serving families nationwide</p>
+
+      <div class="footer-links">
+        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <p class="small">© 2026 Legacy Family Film</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+Can you please just tell me what you think about the pros and cons between the last one you just did and the two above it and then tell me which one you would recommend and which pieces to use?
